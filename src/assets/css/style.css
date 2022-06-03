@@ -1,0 +1,34 @@
+h1 {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+th,
+td,
+span {
+    font-family: 'Rajdhani', sans-serif;
+    white-space: nowrap;
+}
+
+.chart-image {
+    border: 0.5px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.activity-table-header {
+    padding-right: 70px;
+    border-right: 1px solid #C4C4C4;
+
+}
+
+th:last-child {
+    border-right: none
+}
+
+.activity-table-heading {
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.nft-name {
+    color: #585858;
+    font-weight: bold;
+}

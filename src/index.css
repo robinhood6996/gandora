@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rajdhani');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('./assets//css//style.css');
 
 @tailwind base;
 @tailwind components;
@@ -88,12 +89,14 @@ div.postershow {
 }
 
 @font-face {
-  font-family:"Hanno";
+  font-family: "Hanno";
   src: url("./assets/fonts/Hanno_Regular.ttf");
 }
-.font-Hanno{
-  font-family:"Hanno";
+
+.font-Hanno {
+  font-family: "Hanno";
 }
+
 /* The element to apply the animation to */
 div.posterhide {
   animation-name: posterHide;
@@ -139,6 +142,7 @@ div.posterhide {
 .mobile-d-block {
   display: none;
 }
+
 @media only screen and (max-width: 640px) {
   .mobile__top-bg {
     background-image: url("./assets/images/poster.png");
@@ -177,11 +181,11 @@ div.posterhide {
 
   .mobile__top-overflow {
     overflow: hidden;
-    
+
   }
 
   .mobile__top-canvas {
-    
+
     height: 100vh !important;
   }
 
@@ -229,23 +233,29 @@ div.posterhide {
   .mobile-d-block {
     display: block;
   }
+
   .team-main-logo {
     padding-left: 4px;
     padding-right: 4px;
   }
+
   .team-main-logo img {
     width: 100%;
   }
+
   .team-carousel .react-multiple-carousel__arrow {
     min-width: unset;
     background: transparent;
   }
+
   .team-carousel .react-multiple-carousel__arrow::before {
     color: black;
   }
+
   .team-carousel .react-multiple-carousel__arrow--right {
     right: 0;
   }
+
   .team-carousel .react-multiple-carousel__arrow--left {
     left: 0;
   }
@@ -259,7 +269,7 @@ div.posterhide {
 
   .mobile__slider li {
     margin: 0 25px;
-  }  
+  }
 
 }
 

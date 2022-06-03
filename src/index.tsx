@@ -25,6 +25,7 @@ import ComingYellow from "./pages/Upcoming/ComingYellow";
 
 import ComingSoon from "./pages/Upcoming/ComingSoon";
 import AuthProvider from "./context/AuthProvider";
+import Activity from "./components/Activity/Activity";
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -43,9 +44,9 @@ ReactDOM.render(
 
             <Route path="marketplace" element={<Marketplace />} />
             <Route path="marketplace/mproduct" element={<MarketProducts />} />
-            <Route path="user/setting" element={<UserSetting/>}/>
-            <Route path="user/profile" element={<UserProfile/>}/>
-            <Route path="user/inventory" element={<UserInventory/>}/>
+            <Route path="user/setting" element={<UserSetting />} />
+            <Route path="user/profile" element={<UserProfile />} />
+            <Route path="user/inventory" element={<UserInventory />} />
             <Route
               path="marketplace/productdetail/:id"
               element={<NFTProductDetail />}
@@ -59,6 +60,7 @@ ReactDOM.render(
             <Route path="shopcart" element={<Shoppingcart />} />
             <Route path="stay" element={<ComingSoon />} />
             <Route path="swap" element={<ComingSoon />} />
+            <Route path="activity" element={<Activity />} />
           </Routes>
         </Layout>
       </Provider>
