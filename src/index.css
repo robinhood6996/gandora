@@ -1,0 +1,288 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.work {
+  background-image: url('./assets/images/central-hub.png');
+}
+
+.slide {
+  min-width: none;
+}
+
+.react-multi-carousel-item--active div {
+  /* transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px); */
+  /* transition-duration: 0ms; */
+  /* transform: translate3d(0px, 0px, -100px) rotateX(0deg) rotateY(50deg) scale(1);
+  z-index: 0;
+  transform-style: preserve-3d;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition-property: transform; */
+}
+
+.modal-w640 {
+  max-width: 640px;
+}
+
+#filtermodal {
+  z-index: 3001;
+}
+
+#filtermodal .modal-content {
+  background-color: rgb(255, 255, 255, 0.9);
+}
+
+#filtermodal .modal-body {
+  padding: 0px;
+}
+
+div.modal {
+  z-index: 3000;
+}
+
+@keyframes posterArrive {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* The element to apply the animation to */
+div.postershow {
+  animation-name: posterArrive;
+  animation-duration: 2s;
+}
+
+@keyframes posterHide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family:"Hanno";
+  src: url("./assets/fonts/Hanno_Regular.ttf");
+}
+.font-Hanno{
+  font-family:"Hanno";
+}
+/* The element to apply the animation to */
+div.posterhide {
+  animation-name: posterHide;
+  animation-duration: 2s;
+}
+
+@keyframes posterRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The element to apply the animation to */
+.posterRotateLoop {
+  animation-name: posterRotate;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+.coming__yellow-bg {
+  background-image: url("./assets/images/upcoming/CommingSoon2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.coming__timer-bg {
+  background-image: url("./assets/images/upcoming/ComingSoon3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.mobile-d-block {
+  display: none;
+}
+@media only screen and (max-width: 640px) {
+  .mobile__top-bg {
+    background-image: url("./assets/images/poster.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  .mobile__top-text {
+    margin-top: -210px;
+    z-index: 50;
+  }
+
+  .mobile__top-text p {
+    font-size: 18px;
+  }
+
+  .mobile__top-con {
+    /* margin-top: -20px; */
+  }
+
+  .mobile__second-poster {
+    background: #172A38;
+    margin-top: 20;
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 60px 0;
+    background: url("./assets/images/poster-m.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .mobile__top-overflow {
+    overflow: hidden;
+    
+  }
+
+  .mobile__top-canvas {
+    
+    height: 100vh !important;
+  }
+
+  .mobile__top-second {
+    /* background: url("./assets/images/poster-m.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .centralhub__avatar {
+    max-width: 190px;
+  }
+
+  .mobile__control-create {
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  .mobile__control-ava {
+    padding-top: 18px;
+  }
+
+  .mobile__rare-btn {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile__footer {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .mobile-d-block {
+    display: block;
+  }
+  .team-main-logo {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .team-main-logo img {
+    width: 100%;
+  }
+  .team-carousel .react-multiple-carousel__arrow {
+    min-width: unset;
+    background: transparent;
+  }
+  .team-carousel .react-multiple-carousel__arrow::before {
+    color: black;
+  }
+  .team-carousel .react-multiple-carousel__arrow--right {
+    right: 0;
+  }
+  .team-carousel .react-multiple-carousel__arrow--left {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+
+  .mobile__platform-con {
+    margin-bottom: 140px;
+  }
+
+  .mobile__slider li {
+    margin: 0 25px;
+  }  
+
+}
+
+@media only screen and (min-width: 820px) {
+
+  .mobile__slider li {
+    margin: 0 15px;
+  }
+
+}
+
+@media only screen and (min-width: 840px) {
+
+  .mobile__slider li {
+    margin: 0 10px;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
+
+  .mobile__slider li {
+    margin: 0;
+  }
+
+}
