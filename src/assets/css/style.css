@@ -9,9 +9,14 @@ p,
 h2,
 h3,
 h4,
-h5 {
+h5,
+button {
     font-family: 'Rajdhani', sans-serif;
     white-space: nowrap;
+}
+
+.page-header {
+    font-size: 34px;
 }
 
 .chart-image {
@@ -47,6 +52,8 @@ th:last-child {
 .table-heading {
     font-size: 15px !important;
     font-weight: 600;
+    border-right: 2px solid;
+    border-right: 0.5px solid #C4C4C4;
 }
 
 .heading-row-table {

@@ -79,17 +79,21 @@ module.exports = {
         np: "10px 10px 40px 40px", //nft product
       },
       borderWidth: {
-        default: "1px",
+        default: "0.5px",
         0: "0px",
         2: "2px",
         3: "3px",
         4: "4px",
         6: "6px",
         8: "8px",
+        10: "0.5px"
       },
     },
     colors: {
       default: "#EEBC4E",
+      borderdefault: "#C4C4C4",
+      active: "#EEBC4E",
+      backg: "#FBFBFA",
       white: "#ffffff",
       black: "#000000",
       corn: "#E9BC04",
