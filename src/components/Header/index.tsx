@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,12 +16,16 @@ import { menuItems } from "../../core/data/menu";
 import { signInClass } from "../../core/style/homepage";
 import defaultAvatar from "../../assets/images/user/default-sm.png";
 import useAuth from "../../hooks/useAuth";
+import ProfileDropDown from "./ProfileDropDown";
 
-const Header = () => {  
+const Header = () => {
 
   const [userLogined, setUserLogined] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [menuShow, setMenuShow] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false)
+  const menuRef = useRef<HTMLDivElement | null>(null)
+
   const { user } = useAuth();
   const { signOutUser } = useAuth();
   const navigate = useNavigate();
@@ -31,7 +35,27 @@ const Header = () => {
       setModalShow(false)
     }
   }, [user])
-  
+
+
+  useEffect(() => {
+    const hide = (e: any) => {
+      if (menuRef && menuRef.current?.contains(e.currentTarget)) {
+        return
+      }
+      setShowUserMenu(false)
+    }
+
+    if (showUserMenu) {
+      document.body.addEventListener("click", hide)
+    }
+    return () => {
+      document.body.removeEventListener("click", hide)
+    }
+  }, [showUserMenu])
+
+
+
+
   const showModal = () => {
     setModalShow(true);
   };
@@ -53,8 +77,8 @@ const Header = () => {
     "font-Rajdhani  lg:my-20 primary:mx-17 lg:mx-12 sm:mx-8  cursor-pointer text-davygrey text-16 border border-white hover:border-davygrey flex";
 
   return (
-    <div className="w-full" style={{opacity:"0.5"}}>
-      <div className="fixed top-0 msm:ml-16p md:ml-66p md:w-[calc(100%-132px)] msm:w-[calc(100%-32px)] bg-white  rounded-b-20 flex h-45 justify-between bg-desertStorm bg-opacity-60 rounded-b-20 shadow-menu">
+    <div className="w-full" style={{ opacity: "1" }}>
+      <div className="fixed top-0 msm:ml-16p md:ml-66p md:w-[calc(100%-132px)] msm:w-[calc(100%-32px)] flex h-45 justify-between bg-desertStorm bg-opacity-40 rounded-b-20 shadow-menu opacity-80 z-50">
         <button
           className="block medium:hidden ml-20p"
           onClick={() => setMenuToggle()}
@@ -78,13 +102,19 @@ const Header = () => {
             </button>
           )}
           {user?.email && (
-            <div className="flex items-center mr-10p">
+            <div className="flex items-center mr-10p relative z-50" onClick={() => setShowUserMenu(!showUserMenu)}>
               <p>Welcome, {user?.name}</p>
               <img
-                src={user?.photoURL ? user?.photoURL:defaultAvatar}
+                src={user?.photoURL ? user?.photoURL : defaultAvatar}
                 alt=''
-                className="w-26p h-26p rounded-full mx-10p border-1 border-texasRose"
+                className="w-26p h-26p rounded-full mx-10p border-1 border-texasRose cursor-pointer"
               />
+              {
+                showUserMenu && <div className="fixed top-0 right-[7%] pt-[47px] z-[-10]" ref={menuRef}>
+                  <ProfileDropDown />
+                </div>
+              }
+
             </div>
           )}
           {
@@ -101,9 +131,10 @@ const Header = () => {
               className="text-davygrey hover:text-primary mr-27"
             />
           </Link>
-          
+
         </div>
       </div>
+
       {menuShow == true && (
         <div className="bg-desertStorm w-full pt-40 block medium:hidden">
           <div className="ml-40p flex justify-between">
@@ -118,7 +149,7 @@ const Header = () => {
               </label>
             </div>
             <div>
-             
+
             </div>
           </div>
           <div className="border-b-2 border-dashed mx-40p border-davygrey">
@@ -135,7 +166,7 @@ const Header = () => {
             })}
           </div>
           <div className="p-20p flex justify-center">
-            <Nbutton class="bg-texasRose text-default hover:bg-white hover:text-texasRose border-texasRose w-160 mr-22p">
+            <Nbutton class="bg-texasRose text-white hover:bg-white hover:text-texasRose border-texasRose w-160 mr-22p">
               sign in
             </Nbutton>
             <Nbutton

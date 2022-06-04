@@ -27,6 +27,7 @@ import ComingSoon from "./pages/Upcoming/ComingSoon";
 import AuthProvider from "./context/AuthProvider";
 import Activity from "./components/Activity/Activity";
 import Offers from "./components/Offers/Offers";
+import Dashboard from "./pages/Dashboard/Dashboard";
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -63,6 +64,7 @@ ReactDOM.render(
             <Route path="swap" element={<ComingSoon />} />
             <Route path="activity" element={<Activity />} />
             <Route path="offers" element={<Offers />} />
+            <Route path="dashboard" element={<Dashboard />} />
           </Routes>
         </Layout>
       </Provider>
