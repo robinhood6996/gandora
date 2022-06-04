@@ -133,15 +133,15 @@ const Activity = () => {
                                                 <thead>
                                                     <tr className="heading-row-table">
                                                         <th
-                                                            class="px-5 borderRightTableHeader py-3 text-center text-lg  font-semibold text-gray-600 uppercase tracking-wider table-heading">
+                                                            class="px-5 py-3 text-center text-lg  font-semibold text-gray-600 uppercase tracking-wider table-heading">
                                                             <span className=""> NFT TYPES</span>
                                                         </th>
                                                         <th
-                                                            class="px-5 borderRightTableHeader py-3 text-center text-lg  font-semibold text-gray-600 uppercase tracking-wider table-heading">
+                                                            class="px-5 py-3 text-center text-lg  font-semibold text-gray-600 uppercase tracking-wider table-heading">
                                                             Item
                                                         </th>
                                                         <th
-                                                            class="px-5 borderRightTableHeader py-3 text-center text-lg  font-semibold text-gray-600 uppercase tracking-wider table-heading">
+                                                            class="px-5 py-3 text-center text-lg  font-semibold text-gray-600 uppercase tracking-wider table-heading">
                                                             Price
                                                         </th>
                                                         <th

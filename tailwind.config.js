@@ -28,6 +28,8 @@ module.exports = {
           (merged, f) => ({ ...merged, [f]: `${f}px` }),
           {}
         ),
+        base: "15px",
+
       },
       fontWeight: {
         thin: "100",

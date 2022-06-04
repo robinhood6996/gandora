@@ -26,6 +26,7 @@ import ComingYellow from "./pages/Upcoming/ComingYellow";
 import ComingSoon from "./pages/Upcoming/ComingSoon";
 import AuthProvider from "./context/AuthProvider";
 import Activity from "./components/Activity/Activity";
+import Offers from "./components/Offers/Offers";
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -61,6 +62,7 @@ ReactDOM.render(
             <Route path="stay" element={<ComingSoon />} />
             <Route path="swap" element={<ComingSoon />} />
             <Route path="activity" element={<Activity />} />
+            <Route path="offers" element={<Offers />} />
           </Routes>
         </Layout>
       </Provider>

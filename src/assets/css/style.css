@@ -67,3 +67,17 @@ th:last-child {
     font-weight: 600;
     font-family: 'Rajdhani', sans-serif;
 }
+
+.arrow {
+    font-weight: bold;
+}
+
+p.text-base.arrow svg {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.no-offer {
+    background: rgba(128, 124, 118, 0.05);
+    border-radius: 5px;
+}
