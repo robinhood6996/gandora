@@ -4,7 +4,12 @@ h1 {
 
 th,
 td,
-span {
+span,
+p,
+h2,
+h3,
+h4,
+h5 {
     font-family: 'Rajdhani', sans-serif;
     white-space: nowrap;
 }
@@ -31,4 +36,27 @@ th:last-child {
 .nft-name {
     color: #585858;
     font-weight: bold;
+}
+
+.nft-user {
+    font-weight: 600;
+    color: #EEBC4E;
+    text-align: center;
+}
+
+.table-heading {
+    font-size: 15px !important;
+    font-weight: 600;
+}
+
+.heading-row-table {
+    border-bottom: 0.5px solid #C4C4C4;
+}
+
+.border-base {
+    border: 0.5px solid #C4C4C4;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Rajdhani', sans-serif;
 }

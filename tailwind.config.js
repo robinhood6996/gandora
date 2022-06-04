@@ -89,7 +89,7 @@ module.exports = {
       },
     },
     colors: {
-      default: "#FFFFFF",
+      default: "#EEBC4E",
       white: "#ffffff",
       black: "#000000",
       corn: "#E9BC04",
