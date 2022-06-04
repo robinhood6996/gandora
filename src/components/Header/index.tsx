@@ -78,7 +78,7 @@ const Header = () => {
 
   return (
     <div className="w-full" style={{ opacity: "1" }}>
-      <div className="fixed top-0 msm:ml-16p md:ml-66p md:w-[calc(100%-132px)] msm:w-[calc(100%-32px)] flex h-45 justify-between bg-desertStorm bg-opacity-40 rounded-b-20 shadow-menu opacity-80 z-50">
+      <div className="fixed top-0 msm:ml-16p md:ml-66p md:w-[calc(100%-132px)] msm:w-[calc(100%-32px)] flex h-45 justify-between bg-desertStorm bg-opacity-70 rounded-b-20 shadow-menu z-50">
         <button
           className="block medium:hidden ml-20p"
           onClick={() => setMenuToggle()}
