@@ -261,6 +261,43 @@ div.posterhide {
   }
 }
 
+
+
+
+
+
+.drop-select__indicator-separator {
+  display: none;
+}
+
+.drop__select-control * {
+  outline: transparent !important;
+  border: none !important;
+}
+
+
+.drop-select__menu-list * {
+  background-color: transparent !important;
+  color: #585858 !important;
+}
+
+
+.drop-select__option:hover {
+  color: white !important;
+  background-color: #EEBC4E !important;
+}
+
+
+.card-box-shadow {
+  box-shadow: 2px 3px 6px rgba(128, 124, 118, 0.25);
+}
+
+
+
+
+
+
+
 @media only screen and (min-width: 640px) {
 
   .mobile__platform-con {

@@ -1,17 +1,12 @@
 import React from 'react'
 import { MdKeyboardArrowDown } from 'react-icons/md'
+import Select from 'react-select'
 
-const DashboardDropDown = () => {
+
+const DashboardDropDown = ({ options }: any) => {
     return (
-        <div>
-            <select name="" id="">
-                <option value="">All item</option>
-                <option value="">All item</option>
-                <option value="">All item</option>
-            </select>
-            <span>
-                <MdKeyboardArrowDown />
-            </span>
+        <div className='w-full'>
+            <Select options={options} defaultValue={options[0]} classNamePrefix="drop-select" className="uppercase text-[15px] font-Rajdhani text-cloudygrey font-semibold" />
         </div>
     )
 }
