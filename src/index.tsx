@@ -27,9 +27,15 @@ import ComingSoon from "./pages/Upcoming/ComingSoon";
 import AuthProvider from "./context/AuthProvider";
 import Activity from "./components/Activity/Activity";
 import Offers from "./components/Offers/Offers";
-import Favourite from "./components/Favourite/Favourite";
-import DashboardCollection from "./pages/Dashboard/DashboardCollection";
+import Favourite from "./components/Dashboard/Favourite";
+import DashboardSingleCollection from "./pages/Dashboard/DashboardSingleCollection";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Item from "./components/Dashboard/Item";
+import DashboardItem from "./pages/Dashboard/DashboardItem";
+import DashboardFavourite from "./pages/Dashboard/DashboardFavourite";
+import DashboardCollections from "./pages/Dashboard/DashboardCollections";
+import DashboardActivity from "./pages/Dashboard/DashboardActivity";
+
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -64,11 +70,15 @@ ReactDOM.render(
             <Route path="shopcart" element={<Shoppingcart />} />
             <Route path="stay" element={<ComingSoon />} />
             <Route path="swap" element={<ComingSoon />} />
-            <Route path="activity" element={<Activity />} />
+
             <Route path="offers" element={<Offers />} />
-            <Route path="favourite" element={<Favourite />} />
+
             <Route path="dashboard" element={<Dashboard />} />
-            <Route path="dashboard/collection" element={<DashboardCollection />} />
+            <Route path="dashboard/item" element={<DashboardItem />} />
+            <Route path="dashboard/collections" element={<DashboardCollections />} />
+            <Route path="dashboard/collection/1" element={<DashboardSingleCollection />} />
+            <Route path="dashboard/activity" element={<DashboardActivity />} />
+            <Route path="dashboard/favourite" element={<DashboardFavourite />} />
           </Routes>
         </Layout>
       </Provider>

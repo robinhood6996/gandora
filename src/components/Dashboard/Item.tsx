@@ -24,6 +24,13 @@ const Item = () => {
         { value: 'oldest', label: 'Oldest' }
     ]
 
+    // const images = [
+    //     { img: "../../assets/images/items/nft1.png" },
+    //     { img: "../../assets/images/items/nft2.png" },
+    //     { img: "../../assets/images/items/nft3.png" },
+    //     { img: "../../assets/images/items/nft4.png" },
+    // ]
+
     return (
         <div>
             <div className='flex pt-40 w-[100%] lg:w-[90%] mx-auto'>
@@ -39,10 +46,10 @@ const Item = () => {
 
             </div>
             <div className='w-full grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 pt-15'>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                <ProductCard link={'/dashboard/collection/1'} />
+                <ProductCard link={'/dashboard/collection/1'} />
+                <ProductCard link={'/dashboard/collection/1'} />
+                <ProductCard link={'/dashboard/collection/1'} />
             </div>
         </div>
     )

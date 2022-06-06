@@ -43,30 +43,30 @@ const Marketplace = () => {
     console.log(numberRand);
   }, [location])
 
-  if (randomNumber > 0 && randomNumber < 30) {
-    return <StayTuned />
-  } else if (randomNumber > 30 && randomNumber < 60) {
-    return <ComingYellow />
-  
-  } else {
-    return <StayTuned />
-  }
+  // if (randomNumber > 0 && randomNumber < 30) {
+  //   return <StayTuned />
+  // } else if (randomNumber > 30 && randomNumber < 60) {
+  //   return <ComingYellow />
 
-  // return (
-  //     <div className="mt-60" id="marketplace-container">
-  //       <p className="text-45 uppercase leading-50 tracking-3p pt-34p text-center text-texasRose">Market <span className="text-davygrey">place</span></p>
-  //       <p className="text-16 leading-20 tracking-10 text-center">drag to see all category</p>
-  //       <div className="mx-auto w-1000 max-w-1000 my-50p min-h-400 my-auto">
-  //         <Carousel responsive={responsive} infinite>
-  //           {
-  //           slideImages.map( (item:any, index:number) => {
-  //               return <Link to="mproduct" key={index}><img src={item} className="w-300 h-300"/></Link>;
-  //           })
-  //           }
-  //         </Carousel>
-  //       </div>
-  //     </div>
-  // );
+  // } else {
+  //   return <StayTuned />
+  // }
+
+  return (
+    <div className="mt-60" id="marketplace-container">
+      <p className="text-45 uppercase leading-50 tracking-3p pt-34p text-center text-texasRose">Market <span className="text-davygrey">place</span></p>
+      <p className="text-16 leading-20 tracking-10 text-center">drag to see all category</p>
+      <div className="mx-auto w-1000 max-w-1000 my-50p min-h-400 my-auto">
+        <Carousel responsive={responsive} infinite>
+          {
+            slideImages.map((item: any, index: number) => {
+              return <Link to="mproduct" key={index}><img src={item} className="w-300 h-300" /></Link>;
+            })
+          }
+        </Carousel>
+      </div>
+    </div>
+  );
 };
 export default Marketplace;
 

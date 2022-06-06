@@ -10,8 +10,8 @@ const Activity = () => {
 
     return (
         <>
-            <div className='container mx-auto mt-50 '>
-                <div className="text-default page-header mb-3 flex justify-start items-center gap-2 font-Rajdhani font-semibold">
+            <div className=''>
+                {/* <div className="text-default page-header mb-3 flex justify-start items-center gap-2 font-Rajdhani font-semibold">
                     <div>
                         <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.9142 10.0344L1.27396 18.7782C1.16973 18.884 1.03685 18.9561 0.892123 18.9853C0.7474 19.0146 0.597346 18.9998 0.460951 18.9428C0.324556 18.8857 0.207954 18.789 0.1259 18.6648C0.0438466 18.5407 3.13491e-05 18.3947 0 18.2453V0.754659C3.13491e-05 0.605302 0.0438466 0.459312 0.1259 0.335166C0.207954 0.21102 0.324556 0.114299 0.460951 0.0572441C0.597346 0.000189619 0.7474 -0.0146328 0.892123 0.0146519C1.03685 0.0439366 1.16973 0.116012 1.27396 0.221757L9.9142 8.96559C9.98367 9.0357 10.0388 9.119 10.0764 9.2107C10.114 9.30241 10.1333 9.40071 10.1333 9.5C10.1333 9.59928 10.114 9.69759 10.0764 9.7893C10.0388 9.881 9.98367 9.9643 9.9142 10.0344Z" fill="#EEBC4E" />
@@ -23,7 +23,7 @@ const Activity = () => {
                 </div>
 
                 {/* Filter Button Start*/}
-                <div className="filter-buttons-group mx-100 mb-30">
+                {/* <div className="filter-buttons-group mx-100 mb-30">
                     <div className="filter-buttons flex justify-around">
                         <button className="flex gap-2 py-2 px-5 rounded-2 my-auto border-10 border-base">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
@@ -61,7 +61,7 @@ const Activity = () => {
                             OFFERS
                         </button>
                     </div>
-                </div>
+                </div>  */}
                 {/* Filter Button End */}
 
                 <div className="bg-backg">

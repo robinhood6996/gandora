@@ -60,40 +60,40 @@ const News = () => {
     console.log(numberRand);
   }, [location])
 
-  if (randomNumber > 0 && randomNumber < 30) {
-    return <StayTuned />
-  } else if (randomNumber > 30 && randomNumber < 60) {
-    return <ComingYellow />
-  
-  } else {
-    return <StayTuned />
-  }
-  // return (
-  //   <div className="mt-82 font-Rajdhani text-texasRose ">
-  //     <div className="flex justify-center text-45 leading-50 tracking-3p"><span>BLOGS</span></div>
-  //     <div className="my-18 primary:mx-121 lg:mx-81 sm:ms-61">
-  //       <span className="font-semibold mr-10p">CATEGORIES : </span>
-  //       <Nbutton class={artbtn ? activeBtnStyle : deactiveBtnStyle} onClick={()=>filterClick("art", artbtn)}> #ART </Nbutton>
-  //       <Nbutton class={techbtn ? activeBtnStyle : deactiveBtnStyle} onClick={()=>filterClick("tech", techbtn)}> #technology </Nbutton>
-  //       <Nbutton class={crypbtn ? activeBtnStyle : deactiveBtnStyle} onClick={()=>filterClick("crypto", crypbtn)}> #crypto </Nbutton>
-  //       <Nbutton class={landbtn ? activeBtnStyle : deactiveBtnStyle} onClick={()=>filterClick("land", landbtn)}> #land </Nbutton>
+  // if (randomNumber > 0 && randomNumber < 30) {
+  //   return <StayTuned />
+  // } else if (randomNumber > 30 && randomNumber < 60) {
+  //   return <ComingYellow />
 
-  //     </div>
-  //     <div className="primary:mx-110 lg:mx-70 sm:ms-50  flex flex-wrap justify-between">
-  //       {
-  //         BlogInfos.map((blog, index) => {
-  //           return <div key={index} onClick={()=>showModal(blog)}><BlogItem item={blog} key={index} index={index}></BlogItem></div>;
-  //         })
-  //       }
-  //     </div>
+  // } else {
+  //   return <StayTuned />
+  // }
+  return (
+    <div className="mt-82 font-Rajdhani text-texasRose ">
+      <div className="flex justify-center text-45 leading-50 tracking-3p"><span>BLOGS</span></div>
+      <div className="my-18 primary:mx-121 lg:mx-81 sm:ms-61">
+        <span className="font-semibold mr-10p">CATEGORIES : </span>
+        <Nbutton class={artbtn ? activeBtnStyle : deactiveBtnStyle} onClick={() => filterClick("art", artbtn)}> #ART </Nbutton>
+        <Nbutton class={techbtn ? activeBtnStyle : deactiveBtnStyle} onClick={() => filterClick("tech", techbtn)}> #technology </Nbutton>
+        <Nbutton class={crypbtn ? activeBtnStyle : deactiveBtnStyle} onClick={() => filterClick("crypto", crypbtn)}> #crypto </Nbutton>
+        <Nbutton class={landbtn ? activeBtnStyle : deactiveBtnStyle} onClick={() => filterClick("land", landbtn)}> #land </Nbutton>
 
-  //     <BlogPopUpModal
-  //       show={modalShow}
-  //       onHide={() => setModalShow(false)}
-  //       item = {modalData}
-  //     />
-  //   </div>
-  // );
+      </div>
+      <div className="primary:mx-110 lg:mx-70 sm:ms-50  flex flex-wrap justify-between">
+        {
+          BlogInfos.map((blog, index) => {
+            return <div key={index} onClick={() => showModal(blog)}><BlogItem item={blog} key={index} index={index}></BlogItem></div>;
+          })
+        }
+      </div>
+
+      <BlogPopUpModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        item={modalData}
+      />
+    </div>
+  );
 }
 
 export default News;

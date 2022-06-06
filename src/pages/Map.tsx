@@ -15,14 +15,17 @@ const Map = () => {
         setRandomNumber(numberRand);
     }, [location])
 
-    if (randomNumber > 0 && randomNumber < 30) {
-        return <StayTuned />
-    } else if (randomNumber > 30 && randomNumber < 60) {
-        return <ComingYellow />
-   
-    } else {
-        return <StayTuned />
-    }
+    // if (randomNumber > 0 && randomNumber < 30) {
+    //     return <StayTuned />
+    // } else if (randomNumber > 30 && randomNumber < 60) {
+    //     return <ComingYellow />
+
+    // } else {
+    //     return <StayTuned />
+    // }
+    return (
+        <></>
+    )
 
 }
 

@@ -1,6 +1,6 @@
-import React from 'react'
-import { MdKeyboardArrowDown } from 'react-icons/md'
-import Select from 'react-select'
+import React from 'react';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import Select from 'react-select';
 
 
 const DashboardDropDown = ({ options }: any) => {

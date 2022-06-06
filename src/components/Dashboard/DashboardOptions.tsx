@@ -10,23 +10,17 @@ import DashboardDropDown from './DashboardDropDown';
 import Item from './Item';
 import Favorite from './Favourite';
 import Collection from "./Collection"
+import DashboardBtnGroup from './DashboardBtnGroup';
 
 const DashboardOptions = () => {
     const marginStyle = "mr-12"
     return (
         <div className=''>
-            <h1 className='text-center md:text-left inline-flex md:flex text-[34px] text-default font-Rajdhani font-semibold items-center tracking-widest'> <span className='text-[20px]'><AiFillCaretRight /></span> Dashboard</h1>
-            <div className='w-[100%] md:w-[70%] flex justify-between items-center mx-auto pt-20'>
-                <DashboardBtn title={"Item"} icon={<AiFillStar />} adiClass={marginStyle} />
-                <DashboardBtn title={"Collection"} icon={<RiCheckboxMultipleBlankFill />} adiClass={marginStyle} />
-                <DashboardBtn title={"Favorite"} icon={<BsFillSuitHeartFill />} adiClass={marginStyle} />
-                <DashboardBtn title={"Activity"} icon={<MdOutlineSettingsBackupRestore />} adiClass={marginStyle} />
-                <DashboardBtn title={"Offers"} icon={<BsFillTagFill />} />
-            </div>
+            <DashboardBtnGroup />
             <div className='w-full'>
-                {/* <Item /> */}
+                <Item />
                 <Favorite />
-                {/* <Collection /> */}
+                <Collection />
             </div>
         </div>
     )

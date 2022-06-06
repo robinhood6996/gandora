@@ -36,30 +36,30 @@ const Products = () => {
     setRandomNumber(numberRand);
   }, [location])
 
-  if (randomNumber > 0 && randomNumber < 30) {
-    return <StayTuned />
-  } else if (randomNumber > 30 && randomNumber < 60) {
-    return <ComingYellow />
- 
-  } else {
-    return <StayTuned />
-  }
+  // if (randomNumber > 0 && randomNumber < 30) {
+  //   return <StayTuned />
+  // } else if (randomNumber > 30 && randomNumber < 60) {
+  //   return <ComingYellow />
 
-  // return (
-  //     <div className="mt-60" id="marketplace-container uppercase">
-  //       <p className="text-45 uppercase leading-50 tracking-3p pt-34p text-center text-texasRose">product</p>
-  //       <p className="text-16 leading-20 tracking-10 text-center">our product <span className="font-semibold">from grandora</span></p>
-  //       <div className="mx-auto w-1000 max-w-1000 my-50">
-  //         <Carousel responsive={responsive} infinite>
-  //           {
-  //           ProductSlides.map( (item:any, index:number) => {
-  //               return <Link to={"detail/:"+index} key={index}><img src={item.img} className="w-300 h-300 mx-10p"/></Link>;
-  //           })
-  //           }
-  //         </Carousel>
-  //       </div>
-  //     </div>
-  // );
+  // } else {
+  //   return <StayTuned />
+  // }
+
+  return (
+    <div className="mt-60" id="marketplace-container uppercase">
+      <p className="text-45 uppercase leading-50 tracking-3p pt-34p text-center text-texasRose">product</p>
+      <p className="text-16 leading-20 tracking-10 text-center">our product <span className="font-semibold">from grandora</span></p>
+      <div className="mx-auto w-1000 max-w-1000 my-50">
+        <Carousel responsive={responsive} infinite>
+          {
+            ProductSlides.map((item: any, index: number) => {
+              return <Link to={"detail/:" + index} key={index}><img src={item.img} className="w-300 h-300 mx-10p" /></Link>;
+            })
+          }
+        </Carousel>
+      </div>
+    </div>
+  );
 };
 export default Products;
 
