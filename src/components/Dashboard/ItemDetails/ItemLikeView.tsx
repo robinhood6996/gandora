@@ -3,7 +3,7 @@ import { FaRegHeart } from 'react-icons/fa'
 
 const ItemLikeView = ({icon, title, amount}:any) => {
   return (
-    <div className='flex flex-col md:flex-row items-center border-[0.5px] p-3 rounded-[6px] border-active'>
+    <div className='flex flex-col md:flex-row items-center border-[0.5px] px-3 py-2 rounded-[6px] border-active'>
         <div className="text-center flex flex-col justify-center items-center w-[30%]">
             <span className='text-[58px] text-texasRose'>
                {icon}
