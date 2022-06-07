@@ -29,6 +29,7 @@ import Activity from "./components/Activity/Activity";
 import Offers from "./components/Offers/Offers";
 import DashboardCollection from "./pages/Dashboard/DashboardCollection";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import ItemDetails from "./pages/Dashboard/ItemDetails";
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -67,6 +68,7 @@ ReactDOM.render(
             <Route path="offers" element={<Offers />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/collection" element={<DashboardCollection />} />
+            <Route path="dashboard/itemdetails" element={<ItemDetails />} />
           </Routes>
         </Layout>
       </Provider>

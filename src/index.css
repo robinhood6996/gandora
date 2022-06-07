@@ -292,7 +292,9 @@ div.posterhide {
   box-shadow: 2px 3px 6px rgba(128, 124, 118, 0.25);
 }
 
-
+.text-align{
+  text-align: center;
+}
 
 
 
@@ -308,6 +310,12 @@ div.posterhide {
     margin: 0 25px;
   }
 
+}
+
+@media only screen and (min-width:768px) {
+  .text-align{
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 820px) {
