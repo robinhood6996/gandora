@@ -6,7 +6,7 @@ const ItemDetailsBox = (props:any) => {
    
   return (
     <div className="w-full">
-        <div className='flex items-center justify-between text-17 uppercase px-1 py-2 rounded-[6px] bg-[#fef9ed] cursor-pointer text-davygrey font-semibold'
+        <div className='flex items-center justify-between text-17 uppercase py-2 px-3 rounded-[6px] bg-[#fef9ed] cursor-pointer text-davygrey font-semibold'
         onClick={()=> setShow(!show)}
         >
             <h1>{props.title}</h1>

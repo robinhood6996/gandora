@@ -5,7 +5,7 @@ import ItemActivityBtn from './ItemActivityBtn'
 const ItemActivity = () => {
   return (
     <div>
-        <div className='text-17 uppercase px-1 py-2 rounded-[6px] bg-[#fef9ed] text-davygrey font-semibold'>
+        <div className='text-17 uppercase px-3 py-2 rounded-[6px] bg-[#fef9ed] text-davygrey font-semibold'>
             <h1>Item activity</h1>
         </div>
         <div className="flex py-15">
