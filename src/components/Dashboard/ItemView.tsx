@@ -9,8 +9,8 @@ const ItemView = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-40 pb-30  border-b border-dashed border-[#cdcdcd]">
-            <div className="flex items-center">
-                <div className="overflow-hidden self-baseline w-120 h-120 md:w-180 md:h-180 rounded-full">
+            <div className="flex items-center md:items-start">
+                <div className="overflow-hidden self-baseline w-120 h-120 md:w-210 md:h-210 rounded-full">
                     <img src={blog4} alt="nft" className="w-full h-auto rounded-full" />
                 </div>
                 <div className="pl-20">
