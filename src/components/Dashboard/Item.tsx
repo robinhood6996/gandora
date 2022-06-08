@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { AiOutlineClose } from 'react-icons/ai'
+import { BiMenuAltRight } from 'react-icons/bi'
 import DashboardDropDown from './DashboardDropDown'
 import ProductCard from './ProductCard'
 import SearchInput from './SearchInput'
@@ -24,20 +26,41 @@ const Item = () => {
         { value: 'oldest', label: 'Oldest' }
     ]
 
+    const [showOption, setShowOptions] = useState(false)
+
     return (
         <div>
             <div className='flex pt-40 w-[100%] lg:w-[90%] mx-auto'>
-                <div className='w-[55%] mr-12'>
+                <div className='w-[90%] md:w-[55%] mr-12'>
                     <SearchInput />
                 </div>
-                <div className='w-[20%] mr-12'>
+                <div className='w-[20%] mr-12 hidden md:block'>
                     <DashboardDropDown options={options1} />
                 </div>
-                <div className='w-[25%]'>
+                <div className='w-[25%] hidden md:block'>
                     <DashboardDropDown options={options2} />
                 </div>
 
+                <div className='p-1 border-[0.5px] rounded-[5px] border-borderdefault md:hidden block cursor-pointer'>
+                    {showOption ?
+                    <AiOutlineClose  className="text-20" onClick={()=>setShowOptions(false)}/>
+                    :
+                    <BiMenuAltRight className='text-20' onClick={()=>setShowOptions(true)}/>
+                }
+                   
+                </div>
+
             </div>
+            {
+                showOption &&  <div className='md:hidden flex items-center justify-between pt-10 w-full'>
+                <div className='mr-12 w-[40%]'>
+                <DashboardDropDown options={options1} />
+                </div>
+                <div className=' w-[60%]'>
+                <DashboardDropDown options={options2} />
+                </div>
+            </div>
+            }
             <div className='w-full grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 pt-15'>
                 <ProductCard />
                 <ProductCard />
