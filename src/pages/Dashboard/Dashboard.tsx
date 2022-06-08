@@ -10,8 +10,8 @@ const Dashboard = () => {
             <DashboardOptions />
             <div className='w-full'>
                 <Item />
-                {/* <Favorite /> */}
-                {/* <Collection /> */}
+                {/* <Favorite />
+                <Collection /> */}
             </div>
         </div>
     )

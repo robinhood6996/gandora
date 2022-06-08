@@ -25,11 +25,15 @@ import ComingYellow from "./pages/Upcoming/ComingYellow";
 
 import ComingSoon from "./pages/Upcoming/ComingSoon";
 import AuthProvider from "./context/AuthProvider";
-import Activity from "./components/Activity/Activity";
+import Activity from "./pages/Dashboard/DashboardActivities";
 import Offers from "./components/Offers/Offers";
 import DashboardCollection from "./pages/Dashboard/DashboardCollection";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ItemDetails from "./pages/Dashboard/ItemDetails";
+import DashboardFavourite from "./pages/Dashboard/DashboardFavourite";
+import SingleCollection from "./pages/Dashboard/SingleCollection";
+import DashboardActivities from "./pages/Dashboard/DashboardActivities";
+import DashboardOffer from "./pages/Dashboard/DashboardOffer";
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -68,7 +72,12 @@ ReactDOM.render(
             <Route path="offers" element={<Offers />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="dashboard/collection" element={<DashboardCollection />} />
+            <Route path="dashboard/collection/id" element={<SingleCollection />} />
+            <Route path="dashboard/collection/1/details" element={<ItemDetails />} />
             <Route path="dashboard/itemdetails" element={<ItemDetails />} />
+            <Route path="dashboard/favourite" element={<DashboardFavourite />} />
+            <Route path="dashboard/activity" element={<DashboardActivities />} />
+            <Route path="dashboard/offers" element={<DashboardOffer />} />
           </Routes>
         </Layout>
       </Provider>

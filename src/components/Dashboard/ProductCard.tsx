@@ -1,12 +1,14 @@
 import React from 'react'
 import { BsEye } from 'react-icons/bs'
 import { FaRegHeart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import item3 from "../../assets/images/news/item3.png"
 import ethereum from "../../assets/images/svgs/ethereum.svg"
 
-const ProductCard = () => {
+const ProductCard = (props: any) => {
+    const { link } = props;
     return (
-        <div className='w-full card-box-shadow border-[0.5px] border-borderdefault overflow-hidden flex flex-col rounded-tl-[10px] rounded-tr-[10px]  md:rounded-bl-[40px] rounded-bl-[30px] md:rounded-br-[40px] rounded-br-[30px] font-lato'>
+        <Link to={link} className='w-full card-box-shadow border-[0.5px] border-borderdefault overflow-hidden flex flex-col rounded-tl-[10px] rounded-tr-[10px]  md:rounded-bl-[40px] rounded-bl-[30px] md:rounded-br-[40px] rounded-br-[30px] font-lato'>
             <div>
                 <img src={item3} alt="" className='w-full' />
             </div>
@@ -46,7 +48,7 @@ const ProductCard = () => {
                 </div>
 
             </div>
-        </div>
+        </Link>
     )
 }
 

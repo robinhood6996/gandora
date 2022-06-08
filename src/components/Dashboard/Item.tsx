@@ -43,29 +43,29 @@ const Item = () => {
 
                 <div className='p-1 border-[0.5px] rounded-[5px] border-borderdefault md:hidden block cursor-pointer'>
                     {showOption ?
-                    <AiOutlineClose  className="text-20" onClick={()=>setShowOptions(false)}/>
-                    :
-                    <BiMenuAltRight className='text-20' onClick={()=>setShowOptions(true)}/>
-                }
-                   
+                        <AiOutlineClose className="text-20" onClick={() => setShowOptions(false)} />
+                        :
+                        <BiMenuAltRight className='text-20' onClick={() => setShowOptions(true)} />
+                    }
+
                 </div>
 
             </div>
             {
-                showOption &&  <div className='md:hidden flex items-center justify-between pt-10 w-full'>
-                <div className='mr-12 w-[40%]'>
-                <DashboardDropDown options={options1} />
+                showOption && <div className='md:hidden flex items-center justify-between pt-10 w-full'>
+                    <div className='mr-12 w-[40%]'>
+                        <DashboardDropDown options={options1} />
+                    </div>
+                    <div className=' w-[60%]'>
+                        <DashboardDropDown options={options2} />
+                    </div>
                 </div>
-                <div className=' w-[60%]'>
-                <DashboardDropDown options={options2} />
-                </div>
-            </div>
             }
             <div className='w-full grid md:grid-cols-4 grid-cols-2 md:gap-4 gap-2 pt-15'>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                <ProductCard link={'/dashboard/collection/1/details'} />
+                <ProductCard link={'/dashboard/collection/1/details'} />
+                <ProductCard link={'/dashboard/collection/1/details'} />
+                <ProductCard link={'/dashboard/collection/1/details'} />
             </div>
         </div>
     )

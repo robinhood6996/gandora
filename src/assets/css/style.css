@@ -81,3 +81,8 @@ p.text-base.arrow svg {
     background: rgba(128, 124, 118, 0.05);
     border-radius: 5px;
 }
+
+h2.price {
+    font-weight: bold;
+    color: #f3bc57;
+}

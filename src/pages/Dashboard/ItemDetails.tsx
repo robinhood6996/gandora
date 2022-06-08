@@ -11,23 +11,23 @@ import ItemStat from '../../components/Dashboard/ItemDetails/ItemStat'
 
 const ItemDetails = () => {
     return (
-        <div className='container pt-100 pb-40 px-0 md:px-10'>
+        <div className='container pt-100 pb-40 px-2 md:px-10'>
             <h3 className='flex items-center text-davygrey text-18'> <span className="pl-2 text-davygrey text-17"><MdArrowBackIosNew /></span> Back to item</h3>
             <div className='pt-20'>
                 <ItemDetailsTop />
             </div>
             <div className='hidden md:block'>
-            <div className='pt-15'>
-                <ItemStat />
+                <div className='pt-15'>
+                    <ItemStat />
+                </div>
+                <div className='pt-20'>
+                    <ItemActivity />
+                </div>
+                <div className='pt-20'>
+                    <ItemOffers />
+                </div>
             </div>
-            <div className='pt-20'>
-                <ItemActivity />
-            </div>
-            <div className='pt-20'>
-                <ItemOffers />
-            </div>
-            </div>
-{/* mobile vewStart */}
+            {/* mobile vewStart */}
             <div className='block md:hidden'>
                 <div className='flex items-center justify-between pt-20'>
                     <ItemMobileBtn title="Detail" active={true} adiClass="mr-12" />
@@ -35,20 +35,20 @@ const ItemDetails = () => {
                     <ItemMobileBtn title="Offer" active={false} />
                 </div>
 
-<div>
-    <ItemMobileDetails />
-</div>
+                <div>
+                    <ItemMobileDetails />
+                </div>
 
-<div className='pt-20'>
-    <ItemMobileActivity />
-</div>
+                <div className='pt-20'>
+                    <ItemMobileActivity />
+                </div>
 
-<div className='pt-20'>
-    <ItemOfferMobile />
-</div>
+                <div className='pt-20'>
+                    <ItemOfferMobile />
+                </div>
 
             </div>
-          
+
         </div>
     )
 }
