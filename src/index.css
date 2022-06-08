@@ -262,6 +262,15 @@ div.posterhide {
 }
 
 
+.dashboard-option::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.dashboard-option {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 
 
 
@@ -296,9 +305,32 @@ div.posterhide {
   text-align: center;
 }
 
+tbody tr:nth-child(even) {
+ background: rgba(252, 247, 236, 0.5);
+}
+tbody tr > td {
+   padding: 17px 0;
+ }
+
+ .item-type-padding{
+   padding:10px 0
+ }
+
+ .activity-table:nth-child(even){
+  background: rgba(252, 247, 236, 0.5);
+ }
+ .activity-shadow{
+  box-shadow: 0px 1px 15px 2px rgba(0, 0, 0, 0.15);
+ }
 
 
+ .padding-size{
+    padding:0.25rem 0.5rem ;
+ }
 
+ .collection-border{
+   border: 1px solid #cdcdcd;
+ }
 
 @media only screen and (min-width: 640px) {
 
@@ -316,6 +348,19 @@ div.posterhide {
   .text-align{
     text-align: left;
   }
+  .item-type-padding{
+    padding:30px 0
+  }
+  .padding-size{
+    padding: 0.5rem ;
+ }
+
+  .collection-border{
+  border: 1px solid transparent;
+}
+
+
+ 
 }
 
 @media only screen and (min-width: 820px) {
