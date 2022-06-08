@@ -30,12 +30,16 @@ import Offers from "./components/Offers/Offers";
 import Favourite from "./components/Dashboard/Favourite";
 import DashboardSingleCollection from "./pages/Dashboard/DashboardSingleCollection";
 import Dashboard from "./pages/Dashboard/Dashboard";
+<<<<<<< HEAD
 import Item from "./components/Dashboard/Item";
 import DashboardItem from "./pages/Dashboard/DashboardItem";
 import DashboardFavourite from "./pages/Dashboard/DashboardFavourite";
 import DashboardCollections from "./pages/Dashboard/DashboardCollections";
 import DashboardActivity from "./pages/Dashboard/DashboardActivity";
 
+=======
+import ItemDetails from "./pages/Dashboard/ItemDetails";
+>>>>>>> 04b37e96fbc16dc8a1e32994fec6d4636fbf9d3d
 // const container = document.getElementById('root');
 // // Create a root.
 // const root = ReactDOM.createRoot(container);
@@ -74,11 +78,16 @@ ReactDOM.render(
             <Route path="offers" element={<Offers />} />
 
             <Route path="dashboard" element={<Dashboard />} />
+<<<<<<< HEAD
             <Route path="dashboard/item" element={<DashboardItem />} />
             <Route path="dashboard/collections" element={<DashboardCollections />} />
             <Route path="dashboard/collection/1" element={<DashboardSingleCollection />} />
             <Route path="dashboard/activity" element={<DashboardActivity />} />
             <Route path="dashboard/favourite" element={<DashboardFavourite />} />
+=======
+            <Route path="dashboard/collection" element={<DashboardCollection />} />
+            <Route path="dashboard/itemdetails" element={<ItemDetails />} />
+>>>>>>> 04b37e96fbc16dc8a1e32994fec6d4636fbf9d3d
           </Routes>
         </Layout>
       </Provider>
